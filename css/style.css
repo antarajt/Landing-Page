@@ -1,0 +1,163 @@
+body{
+
+    margin: 0;
+    padding: 0;
+    background: #1E242A;
+}
+#main{
+
+    width: 88%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+#box1{
+
+    width: 530px;
+    height: 625px;
+    background-image: url(../img/img1.png);
+    position: absolute;
+    bottom: -100%;
+    left: 30%;
+    animation: anim 2s forwards, anim2 3s forwards 3s;
+}
+#box1::after{
+
+    content: '';
+    position: absolute;
+    width: 530px;
+    height: 625px;
+    background-image: url(../img/img2.png);
+    left: 0;
+    z-index: -1;
+}
+
+@keyframes anim{
+
+    form{
+
+        bottom: -100%;
+
+    }
+    to{
+
+        bottom: 0%;
+    }
+}
+
+@keyframes anim2{
+
+    form{
+
+        left: 30%;
+        width: 530px;
+    }
+    to{
+
+        width: 0px;
+        left: 50%;
+    }
+}
+
+#box2{
+
+    width: auto;
+    height: auto;
+    font-family: 'bahnschrift condensed';
+    color: white;
+    font-size: 8em;
+    font-weight: 500;
+    line-height: 120px;
+    position: absolute;
+    top: 250px;
+    left: 70px;
+    overflow: hidden;
+
+}
+#text{
+
+    position: relative;
+    left: -100%;
+    animation: anim3 2s forwards 3s;
+}
+@keyframes anim3{
+
+    form{
+
+        left: -100%;
+    }
+    to{
+
+        left: 0%;
+    }
+}
+
+#box3{
+
+    overflow: hidden;
+
+}
+.nav{
+
+    display: flex;
+    width: 100%;
+    position: absolute;
+    align-items: center;
+    
+    top: -100%;
+    animation: anim4 2s forwards 2.5s;
+}
+
+#logo{
+
+    float: left;
+    /* width: 11%; */
+    /* margin-left: 100px; */
+    /* margin-top: 20px; */
+
+}
+
+#logo img{
+
+    width: 50px;
+}
+
+#menu{
+
+    font-family: 'bahnschrift condensed';
+    font-size: 16px;
+    color: white;
+    letter-spacing: 2px;
+    padding: 18px 0px;
+ 
+    width: 50%;
+
+}
+
+#menu ul{
+
+    list-style: none;
+
+}
+#menu ul li{
+
+    display: inline-block;
+    padding: 10px 20px;
+    
+}
+#menu ul li a{
+
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+@keyframes anim4{
+
+    form{
+        top: -100%;
+    }
+    to{
+
+        top: 0%;
+    }
+}
